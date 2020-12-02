@@ -6,9 +6,9 @@ class Array
     {
         if (array?.Length > 0)
         {
-            for (int i = 0; i < array.Length; i++)
+            for (int i = array.Length - 1; i >= 0; i--)
             {
-            Console.Write($"{array[i]}{(i != array.Length - 1 ? " " : "")}");
+            Console.Write($"{array[i]}{(i != 0 ? " " : "")}");
             }
         }
         Console.Write("\n");
