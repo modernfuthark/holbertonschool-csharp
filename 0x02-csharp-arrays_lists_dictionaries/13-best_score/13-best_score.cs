@@ -8,16 +8,17 @@ class Dictionary
         if (myList.Count < 1)
             return "None";
 
-        KeyValuePair<string, int> top = new KeyValuePair<string, int>("None", 0);
+        string top = null;
 
         foreach (KeyValuePair<string, int> v in myList)
         {
-            if (v.Value > top.Value)
+            top = top ?? v.Key;
+            if (v.Value > myList[top])
             {
-                top = v;
+                top = v.Key;
             }
         }
 
-        return top.Key;
+        return top;
     }
 }
