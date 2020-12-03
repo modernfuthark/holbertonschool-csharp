@@ -16,17 +16,8 @@ class MyQueue
 		Console.WriteLine($"Queue contains \"{search}\": {hasItem}");
 
 		if (hasItem)
-		{
-			for (int i = 0; i < aQueue.Count; i++)
-			{
-				string item = aQueue.Peek();
-
+			while (aQueue.Contains(search))
 				aQueue.Dequeue();
-
-				if (item == search)
-					break;
-			}
-		}
 
         aQueue.Enqueue(newItem);
         return aQueue;
