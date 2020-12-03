@@ -8,12 +8,12 @@ class LList
         int counter = 0;
         foreach (int element in myLList)
         {
-            counter++;
             if (counter == index)
             {
                 myLList.Remove(element);
                 break;
             }
+            counter++;
         }
     }
 }
