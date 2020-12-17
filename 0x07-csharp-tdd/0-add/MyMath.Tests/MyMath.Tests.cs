@@ -5,6 +5,7 @@ namespace MyMath.Tests
     /// <summary>
     /// NUnit Tests for the Operations class
     /// </summary>
+    [TestFixture]
     public class MathTests
     {
         [Test]
