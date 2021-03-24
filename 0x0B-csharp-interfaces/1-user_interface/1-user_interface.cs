@@ -23,17 +23,17 @@ class TestObject : Base, IInteractive, IBreakable, ICollectable
 
 	public void Interact()
 	{
-		
+		throw new NotImplementedException();
 	}
 
 	public void Break()
 	{
-		
+		throw new NotImplementedException();
 	}
 
 	public void Collect()
 	{
-
+		throw new NotImplementedException();
 	}
 }
 
