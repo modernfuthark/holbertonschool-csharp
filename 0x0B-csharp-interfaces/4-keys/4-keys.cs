@@ -128,19 +128,25 @@ public class Decoration : Base, IInteractive, IBreakable
 /// <summary>
 /// Key class
 /// </summary>
-class Key : Base, ICollectable
+public class Key : Base, ICollectable
 {
-	// isCollected property
+	/// <summary>
+	/// isCollected property
+	/// </summary>
 	public bool isCollected {get; set;}
 
-	// Key class constructor
+	/// <summary>
+	/// Key class constructor
+	/// </summary>
 	public Key(string name = "Key", bool isCollected = false)
 	{
 		this.name = name;
 		this.isCollected = isCollected;
 	}
 
-	// Collect method
+	/// <summary>
+	/// Collect method
+	/// </summary>
 	public void Collect()
 	{
 		if (!isCollected) {
