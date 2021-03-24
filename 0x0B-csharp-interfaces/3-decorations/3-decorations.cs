@@ -55,7 +55,7 @@ public class Door : Base, IInteractive
 	/// </summary>
 	public Door(string _name = "Door")
 	{
-		name = _name;
+		this.name = _name;
 	}
 
 	/// <summary>
@@ -89,10 +89,10 @@ public class Decoration : Base, IInteractive, IBreakable
 		if (_durability <= 0) {
 			throw new Exception("Durability must be greater than 0");
 		} else {
-			durability = _durability;
+			this.durability = _durability;
+			this.name = _name;
+			this.isQuestItem = _isQuestItem;
 		}
-		name = _name;
-		isQuestItem = _isQuestItem;
 	}
 
 	/// <summary>
