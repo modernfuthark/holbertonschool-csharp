@@ -3,7 +3,7 @@ using System;
 /// <summary>
 /// Base class
 /// </summary>
-class Base
+abstract class Base
 {
     public string name {get; set;}
 
@@ -16,7 +16,7 @@ class Base
 	}
 }
 
-class TestObject : Base, IInteractive, IBreakable, ICollectable
+class TestObject : IInteractive, IBreakable, ICollectable
 {
 	public int durability {get; set;}
 	public bool isCollected {get; set;}
