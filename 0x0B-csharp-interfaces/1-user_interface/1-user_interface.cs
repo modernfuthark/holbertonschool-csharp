@@ -48,16 +48,20 @@ interface ICollectable
 /// <summary>
 /// TestObject class
 /// </summary>
-public class TestObject : Base, IInteractive, IBreakable, ICollectable
+public class TestObject : IInteractive, IBreakable, ICollectable
 {
 	/// <summary>
 	/// Durability property
 	/// </summary>
 	public int durability {get; set;}
 	/// <summary>
-	/// isCollected durability
+	/// isCollected property
 	/// </summary>
 	public bool isCollected {get; set;}
+	/// <summary>
+	/// name property
+	/// </summary>
+	public string name {get; set;}
 
 	/// <summary>
 	/// Interact method
