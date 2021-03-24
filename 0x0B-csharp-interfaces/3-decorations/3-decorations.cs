@@ -70,7 +70,7 @@ public class Door : Base, IInteractive
 /// <summary>
 /// Decoration class
 /// </summary>
-public class Decoration : Base, IInteractive, IBreakable
+class Decoration : Base, IInteractive, IBreakable
 {
 	/// <summary>
 	/// isQuestItem property
