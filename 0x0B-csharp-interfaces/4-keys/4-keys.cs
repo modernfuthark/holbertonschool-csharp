@@ -128,30 +128,24 @@ public class Decoration : Base, IInteractive, IBreakable
 /// <summary>
 /// Key class
 /// </summary>
-public class Key : Base, ICollectable
+class Key : Base, ICollectable
 {
-	/// <summary>
-	/// isCollected property
-	/// </summary>
+	// isCollected property
 	public bool isCollected {get; set;}
 
-	/// <summary>
-	/// Key class constructor
-	/// </summary>
+	// Key class constructor
 	public Key(string name = "Key", bool isCollected = false)
 	{
 		this.name = name;
 		this.isCollected = isCollected;
 	}
 
-	/// <summary>
-	/// Collect method
-	/// </summary>
+	// Collect method
 	public void Collect()
 	{
 		if (!isCollected) {
 			isCollected = true;
-			Console.WriteLine($"You picked up the {name}.");
+			Console.WriteLine($"You pick up the {name}.");
 		} else {
 			Console.WriteLine($"You already picked up the {name}.");
 		}
