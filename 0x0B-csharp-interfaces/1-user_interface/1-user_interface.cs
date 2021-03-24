@@ -3,8 +3,11 @@ using System;
 /// <summary>
 /// Base class
 /// </summary>
-abstract class Base
+public abstract class Base
 {
+	/// <summary>
+	/// Name of class
+	/// </summary>
     public string name {get; set;}
 
     /// <summary>
@@ -23,17 +26,17 @@ class TestObject : Base, IInteractive, IBreakable, ICollectable
 
 	public void Interact()
 	{
-		throw new NotImplementedException();
+
 	}
 
 	public void Break()
 	{
-		throw new NotImplementedException();
+
 	}
 
 	public void Collect()
 	{
-		throw new NotImplementedException();
+
 	}
 }
 
