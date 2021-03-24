@@ -70,7 +70,7 @@ public class Door : Base, IInteractive
 /// <summary>
 /// Decoration class
 /// </summary>
-class Decoration : Base, IInteractive, IBreakable
+public class Decoration : Base, IInteractive, IBreakable
 {
 	/// <summary>
 	/// isQuestItem property
@@ -84,7 +84,7 @@ class Decoration : Base, IInteractive, IBreakable
 	/// <summary>
 	/// Decoration class constructor
 	/// </summary>
-	public Decoration(string _name = "Decoration", int _durability = 1, bool _isQuestItem = false)
+	public Decoration(string name = "Decoration", int durability = 1, bool isQuestItem = false)
 	{
 		if (_durability <= 0) {
 			throw new Exception("Durability must be greater than 0");
