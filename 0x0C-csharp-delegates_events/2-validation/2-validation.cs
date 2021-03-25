@@ -60,6 +60,9 @@ public class Player
 		ValidateHP(this.hp + heal);
 	}
 
+	/// <summary>
+	/// ValidateHP method
+	/// </sumamry>
 	public void ValidateHP(float newHp)
 	{
 		if (newHp <= 0) {
