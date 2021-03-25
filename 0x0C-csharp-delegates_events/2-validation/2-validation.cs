@@ -62,7 +62,7 @@ public class Player
 
 	/// <summary>
 	/// ValidateHP method
-	/// </sumamry>
+	/// </summary>
 	public void ValidateHP(float newHp)
 	{
 		if (newHp <= 0) {
