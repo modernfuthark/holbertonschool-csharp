@@ -13,6 +13,11 @@ class Item : BaseClass
 	{
 		this.name = name;
 		this.description = description;
+		if (price < 0.00f)
+		{
+			Console.Writeline("price cannot be below 0. Setting to 0 (free) by default.");
+			price = 0.00f;
+		}
 		this.price = Math.Round(price, 2);
 		this.tags = tags;
 	}

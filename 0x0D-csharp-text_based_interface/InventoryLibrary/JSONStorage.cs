@@ -5,26 +5,27 @@ using System.Text.Json.Serialization;
 
 class JSONStorage
 {
-	Dictionary<T> objects {get; set;}
+	IDictionary<string, object> objectDictionary = new Dictionary<string, object>();
 
-	public Dictionary<string, object> All()
+	public IDictionary<string, object> All()
 	{
-		return this.objects;
+		return objects;
 	}
 
 	public void New(object obj)
 	{
-		string key = $"{obj.GetType()}.{obj.id}";
-		this.objects.Add(new KeyValuePair<string, object>(key, obj));
+		objectDictionary.Add(new KeyValuePair<string, object>(key, obj));
 	}
 
 	public void Save()
 	{
-		List<string> JsonOutput;
-		foreach (object o in this.objects)
-		{
-			string jsonString = JsonSerializer.Serialize(o);
-			JsonOutput.Add(jsonString); // ???
-		}
+		string jsonString = JsonSerializer.Serialize(objectDictionary);
+		File.WriteAllText(storage/inventory_manager.json, jsonString);
+	}
+
+	public void Load()
+	{
+		string jsonString = File.ReadAllText(storage/inventory_manager.json);
+		objectDictionary = JsonSerializer.Deserialize<JSONStorage>(jsonString);
 	}
 }
